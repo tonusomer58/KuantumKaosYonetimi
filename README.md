@@ -1,12 +1,12 @@
-# 🌌 Kuantum Kaos Yönetimi (Quantum Chaos Management)
+# Kuantum Kaos Yönetimi (Quantum Chaos Management)
 
 Bu proje, "Omega Sektörü"ndeki Kuantum Veri Ambarı'nın simülasyonunu içeren bir Nesneye Dayalı Programlama (OOP) ödevidir.
 
-## 🎯 Proje Amacı
+## Proje Amacı
 
 Evrenin en kararsız maddelerini dijital ortamda saklamak, analiz etmek ve patlamadan (Kuantum Çöküşü) gün sonunu getirmek.
 
-## 🛠️ Kullanılan Teknolojiler ve Diller
+## Kullanılan Teknolojiler ve Diller
 
 Proje 4 farklı programlama dilinde, aynı mimari prensipler kullanılarak geliştirilmiştir:
 
@@ -15,7 +15,7 @@ Proje 4 farklı programlama dilinde, aynı mimari prensipler kullanılarak geli�
 - **Python** (3.2)
 - **JavaScript** (Node.js)
 
-## 🏗️ Mimari Yapı (OOP Prensipleri)
+## Mimari Yapı (OOP Prensipleri)
 
 Proje şu prensipleri eksiksiz uygular:
 
@@ -25,12 +25,3 @@ Proje şu prensipleri eksiksiz uygular:
 4.  **Polymorphism (Çok Biçimlilik):** Ortak `AnalizEt()` ve `DurumBilgisi()` metotları.
 5.  **Interface Segregation:** Sadece tehlikeli maddeler için `IKritik` arayüzü.
 6.  **Exception Handling:** Özelleştirilmiş `KuantumCokusuException` hata yönetimi.
-
-## 🚀 Kurulum ve Çalıştırma
-
-### C#
-
-```bash
-cd CSharp
-dotnet run
-```
