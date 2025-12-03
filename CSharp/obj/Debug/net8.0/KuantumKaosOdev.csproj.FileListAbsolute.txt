@@ -1,0 +1,14 @@
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\KuantumKaosOdev.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\KuantumKaosOdev.AssemblyInfoInputs.cache
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\KuantumKaosOdev.AssemblyInfo.cs
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\KuantumKaosOdev.csproj.CoreCompileInputs.cache
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\bin\Debug\net8.0\KuantumKaosOdev.exe
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\bin\Debug\net8.0\KuantumKaosOdev.deps.json
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\bin\Debug\net8.0\KuantumKaosOdev.runtimeconfig.json
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\bin\Debug\net8.0\KuantumKaosOdev.dll
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\bin\Debug\net8.0\KuantumKaosOdev.pdb
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\KuantumKaosOdev.dll
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\refint\KuantumKaosOdev.dll
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\KuantumKaosOdev.pdb
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\KuantumKaosOdev.genruntimeconfig.cache
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\ref\KuantumKaosOdev.dll
