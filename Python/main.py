@@ -39,8 +39,9 @@ class KuantumNesnesi(ABC):
     def analiz_et(self):
         pass
 
-    def durum_bilgisi(self):
-        return f"ID: {self.id} - Stabilite: %{self.stabilite:.2f} - Tehlike: {self.tehlike_seviyesi}"
+   
+def durum_bilgisi(self):
+    return f"[{type(self).__name__}] ID: {self.id} - Stabilite: %{self.stabilite:.2f} - Tehlike: {self.tehlike_seviyesi}"
 
 # Alt Sınıflar
 class VeriPaketi(KuantumNesnesi):
@@ -98,7 +99,7 @@ def main():
                 if tur == 1: envanter.append(VeriPaketi(yeni_id))
                 elif tur == 2: envanter.append(KaranlikMadde(yeni_id))
                 else: envanter.append(AntiMadde(yeni_id))
-                print(f"{yeni_id} eklendi.")
+                print(f"{type(envanter[-1]).__name__} ({yeni_id}) eklendi.")
             
             elif secim == "2":
                 for nesne in envanter:

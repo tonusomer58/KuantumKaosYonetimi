@@ -53,7 +53,7 @@ abstract class KuantumNesnesi
     // Durum Bilgisi
     public string DurumBilgisi()
     {
-        return $"ID: {ID} - Stabilite: %{Stabilite:F2} - Tehlike: {TehlikeSeviyesi}";
+        return $"[{GetType().Name}] ID: {ID} - Stabilite: %{Stabilite:F2} - Tehlike: {TehlikeSeviyesi}";
     }
 }
 
@@ -138,7 +138,7 @@ class Program
                     if (tur == 1) envanter.Add(new VeriPaketi(yeniId));
                     else if (tur == 2) envanter.Add(new KaranlikMadde(yeniId));
                     else envanter.Add(new AntiMadde(yeniId));
-                    Console.WriteLine($"{yeniId} ambara eklendi.");
+                    Console.WriteLine($"{envanter[envanter.Count - 1].GetType().Name} ({yeniId}) ambara eklendi.");
                 }
                 else if (secim == "2")
                 {
@@ -193,3 +193,4 @@ class Program
         }
     }
 }
+

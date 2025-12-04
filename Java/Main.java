@@ -35,7 +35,8 @@ public class Main {
                         envanter.add(new KaranlikMadde(yeniId));
                     else
                         envanter.add(new AntiMadde(yeniId));
-                    System.out.println(yeniId + " eklendi.");
+                    System.out.println(envanter.get(envanter.size() - 1).getClass().getSimpleName() + " (" + yeniId
+                            + ") eklendi.");
                 } else if (secim.equals("2")) {
                     for (KuantumNesnesi kn : envanter) {
                         System.out.println(kn.durumBilgisi());
@@ -129,7 +130,8 @@ abstract class KuantumNesnesi {
     public abstract void analizEt();
 
     public String durumBilgisi() {
-        return "ID: " + id + " - Stabilite: %" + String.format("%.2f", stabilite) + " - Tehlike: " + tehlikeSeviyesi;
+        return "[" + this.getClass().getSimpleName() + "] ID: " + id + " - Stabilite: %"
+                + String.format("%.2f", stabilite) + " - Tehlike: " + tehlikeSeviyesi;
     }
 }
 
