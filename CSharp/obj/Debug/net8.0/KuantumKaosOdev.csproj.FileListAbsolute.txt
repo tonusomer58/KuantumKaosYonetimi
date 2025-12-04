@@ -12,3 +12,4 @@ C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\refint\KuantumKao
 C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\KuantumKaosOdev.pdb
 C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\KuantumKaosOdev.genruntimeconfig.cache
 C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\ref\KuantumKaosOdev.dll
+C:\Users\tonus\Desktop\KuantumKaosOdev\CSharp\obj\Debug\net8.0\KuantumKaosOdev.sourcelink.json

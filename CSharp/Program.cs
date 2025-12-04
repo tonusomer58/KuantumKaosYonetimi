@@ -30,7 +30,7 @@ abstract class KuantumNesnesi
             if (value > 100) _stabilite = 100;
             else _stabilite = value;
 
-            // Hata fırlatma kontrolü: 0 veya altı olursa patlar
+            // Hata fırlatma kontrolü
             if (_stabilite <= 0)
             {
                 throw new KuantumCokusuException(ID);
@@ -41,8 +41,10 @@ abstract class KuantumNesnesi
     public KuantumNesnesi(string id, int tehlike)
     {
         ID = id;
-        _stabilite = 100; // Başlangıç full
         TehlikeSeviyesi = tehlike;
+        // GÜNCELLEME: Stabilite 0-100 arası rastgele başlıyor
+        // (Çökmemesi için en az 10 veriyoruz, ama tamamen şans)
+        _stabilite = new Random().NextDouble() * 100;
     }
 
     // Soyut Metot
@@ -58,7 +60,7 @@ abstract class KuantumNesnesi
 // Veri Paketi
 class VeriPaketi : KuantumNesnesi
 {
-    public VeriPaketi(string id) : base(id, 1) { } // Tehlike düşük
+    public VeriPaketi(string id) : base(id, 1) { }
 
     public override void AnalizEt()
     {
@@ -114,7 +116,7 @@ class Program
         Console.WriteLine("KUANTUM AMBARI'NA HOŞ GELDİNİZ");
 
         while (true)
-        { // Sonsuz döngü
+        {
             try
             {
                 Console.WriteLine("\n--- KUANTUM AMBARI KONTROL PANELİ ---");
@@ -128,9 +130,11 @@ class Program
 
                 if (secim == "1")
                 {
-                    // Rastgele nesne üretimi
                     int tur = rnd.Next(1, 4);
                     string yeniId = "NESNE-" + sayac++;
+                    // Nesne oluşturulurken gecikme ekleyerek Random seed'inin değişmesini sağlıyoruz
+                    System.Threading.Thread.Sleep(20);
+
                     if (tur == 1) envanter.Add(new VeriPaketi(yeniId));
                     else if (tur == 2) envanter.Add(new KaranlikMadde(yeniId));
                     else envanter.Add(new AntiMadde(yeniId));
@@ -138,7 +142,6 @@ class Program
                 }
                 else if (secim == "2")
                 {
-                    // Polimorfizm ile listeleme
                     foreach (var nesne in envanter)
                     {
                         Console.WriteLine(nesne.DurumBilgisi());
@@ -160,7 +163,6 @@ class Program
 
                     if (nesne != null)
                     {
-                        // Type Checking (is kontrolü)
                         if (nesne is IKritik kritikNesne)
                         {
                             kritikNesne.AcilDurumSogutmasi();
@@ -179,11 +181,10 @@ class Program
             }
             catch (KuantumCokusuException ex)
             {
-                // Game Over
                 Console.WriteLine("\n*********************************");
                 Console.WriteLine(ex.Message.ToUpper());
                 Console.WriteLine("*********************************");
-                break; // Program sonlanır
+                break;
             }
             catch (Exception ex)
             {

@@ -15,7 +15,8 @@ class IKritik(ABC):
 class KuantumNesnesi(ABC):
     def __init__(self, nesne_id, tehlike):
         self.id = nesne_id
-        self._stabilite = 100.0
+        # GÜNCELLEME: Stabilite 0-100 arası random float
+        self._stabilite = random.uniform(0, 100)
         self.tehlike_seviyesi = tehlike
 
     # Encapsulation
@@ -113,17 +114,16 @@ def main():
                 girilen_id = input("ID giriniz: ")
                 bulunan = next((x for x in envanter if x.id == girilen_id), None)
                 if bulunan:
-                    # Type Checking
                     if isinstance(bulunan, IKritik):
                         bulunan.acil_durum_sogutmasi()
                     else:
                         print("Bu nesne soğutulamaz!")
                 else:
-                    print("Bulunamadı.")
+                    print("Bulunamadı.");
 
             elif secim == "5": break
 
-        except KuantumCokusuException as e: # Game Over
+        except KuantumCokusuException as e:
             print("\n*********************************")
             print(str(e).upper())
             print("*********************************")

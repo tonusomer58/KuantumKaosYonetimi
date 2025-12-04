@@ -1,3 +1,6 @@
+//cd Javascript
+//node app.js
+
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -5,25 +8,23 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-// Özel Hata
 class KuantumCokusuException extends Error {
   constructor(id) {
     super(`SİSTEM ÇÖKTÜ! TAHLİYE BAŞLATILIYOR... Patlayan Nesne ID: ${id}`);
   }
 }
 
-// Kuantum Nesnesi
 class KuantumNesnesi {
   constructor(id, tehlike) {
     if (this.constructor === KuantumNesnesi) {
       throw new Error("Abstract class cannot be instantiated.");
     }
     this.id = id;
-    this._stabilite = 100;
+    // GÜNCELLEME: Stabilite 0-100 arası random
+    this._stabilite = Math.random() * 100;
     this.tehlikeSeviyesi = tehlike;
   }
 
-  // Encapsulation
   get stabilite() {
     return this._stabilite;
   }
@@ -32,7 +33,6 @@ class KuantumNesnesi {
     if (value > 100) this._stabilite = 100;
     else this._stabilite = value;
 
-    //
     if (this._stabilite <= 0) {
       throw new KuantumCokusuException(this.id);
     }
@@ -49,7 +49,6 @@ class KuantumNesnesi {
   }
 }
 
-// Alt Sınıflar
 class VeriPaketi extends KuantumNesnesi {
   constructor(id) {
     super(id, 1);
@@ -71,7 +70,6 @@ class KaranlikMadde extends KuantumNesnesi {
   }
 
   acilDurumSogutmasi() {
-    // Interface implementation
     this.stabilite += 50;
     console.log(`${this.id} soğutuldu.`);
   }
@@ -133,7 +131,6 @@ function menu() {
         rl.question("ID: ", (id) => {
           const n = envanter.find((x) => x.id === id);
           if (n) {
-            // Type Checking (Method var mı?)
             if (typeof n.acilDurumSogutmasi === "function") {
               n.acilDurumSogutmasi();
             } else {

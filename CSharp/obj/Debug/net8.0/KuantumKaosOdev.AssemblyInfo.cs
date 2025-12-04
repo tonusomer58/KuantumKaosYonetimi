@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KuantumKaosOdev")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+300f8a2112090ae5d7668d6e54450345ff04fe0a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b00e604076370738920053fe5a308fda31843fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("KuantumKaosOdev")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KuantumKaosOdev")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
