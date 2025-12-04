@@ -43,9 +43,11 @@ class KuantumNesnesi {
   }
 
   durumBilgisi() {
-    return `ID: ${this.id} - Stabilite: %${this.stabilite.toFixed(
-      2
-    )} - Tehlike: ${this.tehlikeSeviyesi}`;
+    return `[${this.constructor.name}] ID: ${
+      this.id
+    } - Stabilite: %${this.stabilite.toFixed(2)} - Tehlike: ${
+      this.tehlikeSeviyesi
+    }`;
   }
 }
 
@@ -111,7 +113,11 @@ function menu() {
         if (tur === 0) envanter.push(new VeriPaketi(yeniId));
         else if (tur === 1) envanter.push(new KaranlikMadde(yeniId));
         else envanter.push(new AntiMadde(yeniId));
-        console.log(`${yeniId} eklendi.`);
+        console.log(
+          `${
+            envanter[envanter.length - 1].constructor.name
+          } (${yeniId}) eklendi.`
+        );
         menu();
       } else if (secim === "2") {
         envanter.forEach((n) => console.log(n.durumBilgisi()));
